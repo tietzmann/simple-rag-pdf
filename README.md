@@ -19,6 +19,17 @@ changing the file path in the script.
 
 ------------------------------------------------------------------------
 
+## Quick Start
+
+```bash
+pip install -r requirements.txt
+python download_punkt.py
+python build_index.py
+python ask_llm.py
+```
+
+------------------------------------------------------------------------
+
 ## Key concepts demonstrated
 
 -   Text extraction and preprocessing\
