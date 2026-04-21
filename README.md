@@ -51,7 +51,7 @@ The pipeline has three steps:
 Install the required dependencies:
 
 ``` bash
-pip install pdfplumber numpy faiss-cpu sentence-transformers nltk groq
+pip install -r requirements.txt
 ```
 
 ------------------------------------------------------------------------
@@ -74,7 +74,7 @@ nltk.download('punkt_tab')
 Run:
 
 ``` bash
-python process_pdf.py
+python build_index.py
 ```
 
 By default, the script uses:
@@ -99,7 +99,7 @@ This step generates:
 Run:
 
 ``` bash
-python query_vector_db.py
+python test_retrieval.py
 ```
 
 You can ask a question and see the most relevant chunks retrieved from
@@ -127,7 +127,7 @@ Add your API key inside:
 ### Run
 
 ``` bash
-python query_groq.py
+python ask_llm.py
 ```
 
 Ask a question, and the system will: - retrieve relevant chunks\
@@ -149,13 +149,14 @@ Ask a question, and the system will: - retrieve relevant chunks\
 ## Project structure
 
     .
-    ├── process_pdf.py
-    ├── query_vector_db.py
-    ├── query_groq.py
+    ├── build_index.py
+    ├── test_retrieve.py
+    ├── ask_llm.py
     ├── groq.txt
     ├── faiss_index.bin
     ├── chunks.pkl
     └── Trading-Volatility-Colin-Bennet.pdf
+    └── requirements.txt
 
 ------------------------------------------------------------------------
 
